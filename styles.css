@@ -1,0 +1,71 @@
+body {
+	margin: 0;
+	box-sizing: border-box;
+	-webkit-font-smoothing: antialiased;
+	font-family: 'PT Sans', sans-serif;
+}
+
+.header {
+	background: #111;
+	height: 58px;
+	width: 100%;
+}
+
+.container {
+	width: 1710px;
+	position: relative;
+	margin: 0 auto;
+}
+
+.left, .logo, .right-bullshit, .search, .search-input {
+	position: absolute;
+}
+
+.logo {
+	left: 750px;
+}
+
+.left {
+	top: 18px;
+}
+
+.search {
+	right: 0;
+	top: 15px;
+}
+
+.right-bullshit {
+	right: 50px;
+	top: 18px;
+}
+
+.search-input {
+	left: 467px;
+	opacity: 0;
+	top: 6px;
+}
+
+.search-input input {
+	outline: 0;
+	border: 0;
+	background: transparent;
+	color: white;
+	font-size: 30px;
+	font-weight: bold;
+	width: 800px;
+	text-align: center;
+}
+
+.search-input input::-webkit-input-placeholder {color:#555;}
+
+.right-bullshit, .left, .logo, .search-input {
+	transition: all .2s ease-in-out;
+}
+
+.body--active .right-bullshit, .body--active .left, .body--active .logo {
+	opacity: 0;
+}
+
+.body--active .search-input {
+	opacity: 1;
+}

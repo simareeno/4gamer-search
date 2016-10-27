@@ -1,0 +1,61 @@
+.icon {
+  display: inline-flex;
+  justify-content: center;
+  position: relative;
+  width: 24px;
+  height: 24px;
+	opacity: .5;
+  cursor: pointer;
+	transition: all .2s ease-in-out;
+}
+.icon:hover {
+	opacity: 1;
+}
+.circle {
+  position: absolute;
+  box-shadow: inset 0 0 0 2px white;
+  width: 13px;
+  height: 13px;
+  border-radius: 100%;
+  transform: scale(1);
+  transition: all 0.2s 0s ease-in-out;
+  top: 4px;
+  left: 7px;
+  transform-origin: bottom;
+}
+.handle {
+  height: 8px;
+  width: 2px;
+  transform: rotate(-45deg);
+  background: white;
+  position: absolute;
+  top: 13px;
+  right: 2px;
+  transition: all 0.2s ease-in-out;
+}
+.handle:after {
+  content: '';
+  height: 8px;
+  width: 2px;
+  background: white;
+  display: block;
+  transition: all 0.2s ease-in-out;
+}
+.icon--active .circle {
+  transform: scale(0);
+  box-shadow: 0 0 0 2px transparent;
+  transition: all 0.2s ease-in-out;
+}
+.icon--active .handle {
+  top: -4px;
+  right: 11px;
+}
+.icon--active .handle,
+.icon--active .handle:after {
+  height: 32px;
+	width: 3px;
+}
+.icon--active .handle:after {
+  transform: rotate(90deg);
+  transition: all 0.2s 0s ease-in-out;
+}

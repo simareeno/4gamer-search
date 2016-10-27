@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>4gamer search</title>
+	<link rel="stylesheet" href="styles.css">
+	<link rel="stylesheet" href="search.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js" charset="utf-8"></script>
+</head>
+<body>
+
+	<div class="header">
+		<div class="container">
+		<div class="left"><img src="img/left.png" alt=""></div>
+		<div class="logo"><img src="img/logo.png" alt=""></div>
+		<div class="search-input">
+			<input type="text" placeholder="Поиск">
+		</div>
+		<div class="right-bullshit"><img src="img/bullshit.png" alt=""></div>
+		<div class="search">
+			<div class="icon">
+				<div class="circle"></div>
+				<div class="handle"></div>
+			</div>
+		</div>
+		</div>
+	</div>
+
+	<div class="content">
+		<img src="img/body.png" alt="">
+	</div>
+
+	<script>
+	$(function() {
+
+		$('.icon').click(function() {
+			$(this).toggleClass('icon--active');
+			$('body').toggleClass('body--active');
+			$('.search-input input').focus();
+		})
+
+		$('input').on(('input'), function() {
+			var inputLength = $(this).val().length;
+			console.log(inputLength);
+			$('body').addClass('body--text')
+		})
+
+	});
+	</script>
+
+</body>
+</html>
