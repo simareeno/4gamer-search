@@ -17,6 +17,10 @@ body {
 	margin: 0 auto;
 }
 
+.content {
+	position: relative;
+}
+
 .left, .logo, .right-bullshit, .search, .search-input {
 	position: absolute;
 }
@@ -56,6 +60,17 @@ body {
 	text-align: center;
 }
 
+.result {
+	background: white;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	opacity: 0;
+	transition: all .2s ease-in-out;
+}
+
 .search-input input::-webkit-input-placeholder {color:#555;}
 
 .right-bullshit, .left, .logo, .search-input {
@@ -67,5 +82,9 @@ body {
 }
 
 .body--active .search-input {
+	opacity: 1;
+}
+
+.body--text .result {
 	opacity: 1;
 }
